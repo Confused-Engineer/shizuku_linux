@@ -1,0 +1,13 @@
+[Unit]
+Description=Shizuku Launcher for Linux
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/bin/shizuku_linux
+
+[Install]
+WantedBy=multi-user.target
