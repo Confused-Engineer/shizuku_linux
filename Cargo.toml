@@ -1,0 +1,14 @@
+[package]
+name = "shizuku_linux"
+version = "0.1.0"
+edition = "2024"
+authors = ["Confused Engineer"]
+
+[dependencies]
+rusb = "0.9"
+davids-standard-library = {git = "https://github.com/Confused-Engineer/davids-standard-library.git" }
+
+[profile.release]
+lto = "fat"
+strip = "symbols"
+codegen-units = 1
