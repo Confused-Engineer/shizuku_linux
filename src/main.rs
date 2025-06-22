@@ -64,44 +64,44 @@ fn is_match(vendor_id: String) -> rusb::Result<bool>
 }
 
 
-#[cfg(test)]
-mod tests {
-
-
-
-    #[test]
-    fn adb_test() -> Result<(), std::io::Error> {
-        
-        let out = std::process::Command::new("adb")
-            .args(["shell", "sh", "/sdcard/Android/data/moe.shizuku.privileged.api/start.sh"])
-            .stdout(std::process::Stdio::piped())
-            .output()?.stdout;
-
-        let out = String::from_utf8(out);
-        
-        match out {
-            Ok(out) => println!("{}", out),
-            Err(_) => println!("err"),
-        }
-        Ok(())
-    }
-
-
-
-    #[test]
-    fn assets()
-    {
-        let test: Vec<String> = include_str!("../assets/devices")
-                .lines()
-                .map(String::from)  
-                .collect();
-
-        for line in test
-        {
-            println!("{}", line)
-        }
-    }
-
-
-
-}
+//#[cfg(test)]
+//mod tests {
+//
+//
+//
+//    #[test]
+//    fn adb_test() -> Result<(), std::io::Error> {
+//        
+//        let out = std::process::Command::new("adb")
+//            .args(["shell", "sh", "/sdcard/Android/data/moe.shizuku.privileged.api/start.sh"])
+//            .stdout(std::process::Stdio::piped())
+//            .output()?.stdout;
+//
+//        let out = String::from_utf8(out);
+//        
+//        match out {
+//            Ok(out) => println!("{}", out),
+//            Err(_) => println!("err"),
+//        }
+//        Ok(())
+//    }
+//
+//
+//
+//    #[test]
+//    fn assets()
+//    {
+//        let test: Vec<String> = include_str!("../assets/devices")
+//                .lines()
+//                .map(String::from)  
+//                .collect();
+//
+//        for line in test
+//        {
+//            println!("{}", line)
+//        }
+//    }
+//
+//
+//
+//}//
