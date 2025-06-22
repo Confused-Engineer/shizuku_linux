@@ -12,11 +12,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "davids-standard-library"
-version = "0.1.0"
-source = "git+https://github.com/Confused-Engineer/davids-standard-library.git#5db607e63bd77b1d027d6491303b2052b4daaf93"
-
-[[package]]
 name = "libc"
 version = "0.2.170"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -54,7 +49,6 @@ dependencies = [
 name = "shizuku_linux"
 version = "0.1.0"
 dependencies = [
- "davids-standard-library",
  "rusb",
 ]
 
